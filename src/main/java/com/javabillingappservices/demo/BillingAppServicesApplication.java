@@ -8,7 +8,7 @@ public class BillingAppServicesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BillingAppServicesApplication.class, args);
-		System.out.println("Amal");
+		System.out.println("Billing App Initiated");
 	}
 
 }
