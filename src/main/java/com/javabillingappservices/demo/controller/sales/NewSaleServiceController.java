@@ -1,21 +1,20 @@
 package com.javabillingappservices.demo.controller.sales;
 
-import com.javabillingappservices.demo.model.sales.NewSaleModel;
+import com.javabillingappservices.demo.model.sales.MainSaleModel;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/newsales")
+@RequestMapping("/mainsale")
 public class NewSaleServiceController {
 
     @GetMapping("{salestatus}")
-    public NewSaleModel getNewSalesResponse(String status){
-        return new NewSaleModel("fadsf", "sadfafd", "dafsdf", 12);
+    public MainSaleModel getNewSalesResponse(String status){
+        return new MainSaleModel();
     }
 
     @PostMapping
-    public String postNewSalesRequest(@RequestBody NewSaleModel newSaleModel){
+    public String postNewSalesRequest(@RequestBody MainSaleModel newSaleModel){
         return "Inserted new sale";
     }
-
 
 }
