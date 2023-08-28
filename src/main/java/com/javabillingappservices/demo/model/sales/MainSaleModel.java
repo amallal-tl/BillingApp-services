@@ -5,23 +5,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="sales")
+@Table(name="main_sale")
 public class MainSaleModel {
-
     @Id
+    private String mainSaleId;
     private String uniqueSaleId;
     private double totalAmount;
-    private int salestatus;
+    private int saleStatus;
     private String userId;
     private String machineId;
 
     public MainSaleModel() {
     }
 
-    public MainSaleModel(String uniqueSaleId, double totalAmount, int salestatus, String userId, String machineId) {
+    public MainSaleModel(String uniqueSaleId, double totalAmount, int saleStatus, String userId, String machineId) {
         this.uniqueSaleId = uniqueSaleId;
         this.totalAmount = totalAmount;
-        this.salestatus = salestatus;
+        this.saleStatus = saleStatus;
         this.userId = userId;
         this.machineId = machineId;
     }
@@ -43,11 +43,11 @@ public class MainSaleModel {
     }
 
     public int getSalestatus() {
-        return salestatus;
+        return saleStatus;
     }
 
     public void setSalestatus(int salestatus) {
-        this.salestatus = salestatus;
+        this.saleStatus = salestatus;
     }
 
     public String getUserId() {
@@ -65,5 +65,14 @@ public class MainSaleModel {
     public void setMachineId(String machineId) {
         this.machineId = machineId;
     }
+
+    public String getMainSaleId() {
+        return mainSaleId;
+    }
+
+    public void setMainSaleId(String mainSaleId) {
+        this.mainSaleId = mainSaleId;
+    }
+
 }
 

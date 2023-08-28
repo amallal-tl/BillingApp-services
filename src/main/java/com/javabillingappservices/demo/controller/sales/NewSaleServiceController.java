@@ -4,8 +4,9 @@ import com.javabillingappservices.demo.model.sales.MainSaleModel;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/mainsale")
+@RequestMapping("/newsale")
 public class NewSaleServiceController {
+
 
     @GetMapping("{salestatus}")
     public MainSaleModel getNewSalesResponse(String status){
